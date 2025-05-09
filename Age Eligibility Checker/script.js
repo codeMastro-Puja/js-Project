@@ -2,7 +2,7 @@ document.getElementById("checkButton").addEventListener
 ("click",function(){
 //select where to display the results
 const resultDiv = document.getElementById("result");
-resultDiv.innerhtml = "";
+resultDiv.innerHTML = "";
 //get the value from the input
 const ageValue = parseInt (document.getElementById("ageInput").value);
 
@@ -12,26 +12,26 @@ if(isNaN(ageValue) || ageValue < 0){
 }
 //check for vote
 if(ageValue >= 18){
-    resultDiv.innerHTML = "you are eligible to vote";
+    resultDiv.innerHTML += "You are eligible to vote.<br>";
 }
 else{
-    resultDiv.innerHTML = "you are not eligible to vote";
+    resultDiv.innerHTML += "You are not eligible to vote.<br>";
 }
 
 //check for alcohol
-if(ageValue>=21){
-    resultDiv.innerHTML ="You are eligible to drink alchohol";
+if(ageValue >= 21){
+    resultDiv.innerHTML += "You are eligible to drink alcohol.<br>";
 }
 else{
-    resultDiv.innerHTML ="You are not eligible to drink alcohol";
+    resultDiv.innerHTML += "You are not eligible to drink alcohol.<br>";
 }
 
 //check for drive
-if(ageValue>=16){
-    resultDiv.innerHTML ="You are eligible to drive";
+if(ageValue >= 16){
+    resultDiv.innerHTML += "You are eligible to drive.<br>";
 }
 else{
-    resultDiv.innerHTML ="You are not eligible to drive";
+    resultDiv.innerHTML += "You are not eligible to drive.<br>";
 }
 
 });
